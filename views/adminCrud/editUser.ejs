@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+<%- include('../partials/admin_head.ejs') %>
+<body>
+  <h1 class="text-center">Edit User: <%= fullName%></h1>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-center">
+        <form action="/update/<%= _id %>" method="post" class="w-50 p-4 border rounded shadow-sm bg-light">
+            <div class="form-group mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" value="<%= email %>" >
+            </div>
+            <div class="form-group mb-3">
+                <label for="fullName" class="form-label">fullName</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" value="<%= fullName %>">
+            </div>
+            <div class="form-group mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="text" id="gender" name="gender" class="form-control" value="<%= gender %>">
+            </div>
+            <!-- <button type="submit" class="btn btn-primary w-100">Submit</button> -->
+             <input type="submit" value="submit" class="btn btn-primary w-100">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <div class="form-box">
+
+      <form action="/login" method="post">
+
+        <% if (errorMessage) { %>
+        <p style="color : red;
+        text-align: center;
+        font-family: sans-serif;"><%= errorMessage %></p>
+        <% } %>
+
+        <input type="email" name="email" placeholder="enter email" required>
+
+        <input type="password" name="password" placeholder="enter password" required>
+        
+        <!-- <div style="position: relative;">
+          <input type="password" name="password" placeholder="enter password"
+            required id="password">
+          <span id="togglePassword"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+            <i class="far fa-eye"></i>
+          </span>
+        </div> -->
+
+        <input type="submit" value="LOGIN">
+
+        <p>Don'T Have an Account?</p>
+
+      </form>
+
+      <form action="/signup" method="post">
+        <input type="submit" value="signup" id="signup-btn">
+      </form>
+
+    </div>
+
+    <!-- <script>
+      
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function () {
+        
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+      });
+    </script -->
+
+  </body>
+</html>

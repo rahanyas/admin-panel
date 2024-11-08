@@ -1,0 +1,65 @@
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+
+    <form action="/sign-in" method="post">
+
+      <% if (errorMessage) { %>
+      <p><%= errorMessage %></p>
+      <% } %>
+
+      <input type="text" name="fullName" placeholder="enter fullname"
+        required>
+
+      <input type="email" name="email" placeholder="enter email" required>
+
+      <input type="password" name="password" placeholder="create password"
+        required>
+        <!-- <div style="position: relative;">
+          <input type="password" name="password" placeholder="enter password"
+            required class="password">
+          <span class="togglePassword"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+            <i class="far fa-eye"></i>
+          </span>
+        </div> -->
+
+      <input type="password" name="confirmPass" placeholder="confirm password"
+        required>
+
+
+        <!-- <div style="position: relative;">
+          <input type="password" name="confirmPass" placeholder="confirm password"
+            required class="password">
+          <span class="togglePassword"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+            <i class="far fa-eye"></i>
+          </span>
+        </div> -->
+
+      <input type="text" name="gender" placeholder="gender"
+        required>
+
+      <input type="submit" value="signup">
+
+    </form>
+
+    <!-- <script>
+const togglePassword = document.querySelectorAll(".togglePassword");
+const passwords = document.querySelectorAll(".password");
+
+
+togglePassword.forEach((icon, index) => {
+  icon.addEventListener("click", function () {
+    
+    const type = passwords[index].getAttribute("type") === "password" ? "text" : "password";
+    passwords[index].setAttribute("type", type);
+    
+    // Toggle the icon between eye and eye-slash
+    this.querySelector('i').classList.toggle('fa-eye-slash');
+  });
+});
+    </script> -->
+
+  </body>
+</html>
