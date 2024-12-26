@@ -4,7 +4,7 @@ import router from './routes/userRoutes.js';
 import adminRouter from './routes/adminRoutes.js'
 import session from 'express-session';
 // import nocache from 'nocache';
-//changed vse
+//changed db
 import path from 'path';
 import { fileURLToPath } from 'url';
 
