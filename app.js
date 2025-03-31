@@ -1,4 +1,4 @@
-import express from 'express';
+ import express from 'express';
 import { connectDB } from './config/db.js';
 import router from './routes/userRoutes.js';
 import adminRouter from './routes/adminRoutes.js'
