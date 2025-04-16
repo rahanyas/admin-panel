@@ -13,7 +13,7 @@ const port = 9000;
 const __fileName = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__fileName);
 
-connectDB();
+ connectDB();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
